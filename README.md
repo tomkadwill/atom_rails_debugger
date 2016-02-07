@@ -14,7 +14,13 @@ And then execute:
 
     $ bundle
 
-Then you need to include the gem in your `ApplicationController`. Place this line at the bottom of your `ApplicationController` class:
+Then include byebug core at the top of your `application_controller.rb`:
+
+```
+require 'byebug/core'
+```
+
+Finally, you need to include the gem in your `ApplicationController`. Place this line at the bottom of your `ApplicationController` class:
 
 ```
 include AtomRailsDebugger
