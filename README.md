@@ -7,6 +7,7 @@ atom_rails_debugger allows you to debug Rails applications from inside Atom.
 Add this line to your application's Gemfile:
 
 ```ruby
+gem 'byebug'
 gem 'atom_rails_debugger'
 ```
 
@@ -20,10 +21,18 @@ Then include byebug core at the top of your `application_controller.rb`:
 require 'byebug/core'
 ```
 
-Finally, you need to include the gem in your `ApplicationController`. Place this line at the bottom of your `ApplicationController` class:
+Finally, you need to include the gem in your `ApplicationController`. Place this line at the top of your `ApplicationController` class:
 
 ```
 include AtomRailsDebugger
+```
+
+## Troubleshooting
+
+If you have any problems, please ensure that you have the latest version of `byebug` installed. If you have any problems then try checking out master
+
+```
+gem 'byebug, github: 'deivid-rodriguez/byebug'
 ```
 
 ## Usage
